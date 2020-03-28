@@ -10,14 +10,17 @@ import UIKit
 
 class ExchangeRateViewController: UIViewController {
 
-    var exchangeTitle : UILabel!
-    var rateValue : UILabel!
+    var exchangeTitle: UILabel!
+    var rateValue: UILabel!
     var currencyPicker: CurrencyPickerView!
+    var viewModel: ExchangeRateViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .black
+        
+        viewModel = ExchangeRateViewModel()
         
         setupExchangeTitle()
         
@@ -49,9 +52,9 @@ class ExchangeRateViewController: UIViewController {
     }
     
     func setupCurrencyPicker(){
-        currencyPicker = CurrencyPickerView()
+        currencyPicker = CurrencyPickerView(viewModel: viewModel, frame: CGRect())
         currencyPicker.translatesAutoresizingMaskIntoConstraints = false
-        currencyPicker.backgroundColor = .yellow
+        currencyPicker.backgroundColor = .white
         view.addSubview(currencyPicker)
     }
     

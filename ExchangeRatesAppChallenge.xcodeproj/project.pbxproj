@@ -9,19 +9,25 @@
 /* Begin PBXBuildFile section */
 		3F5EB815242F94A70016B04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB814242F94A70016B04D /* AppDelegate.swift */; };
 		3F5EB817242F94A70016B04D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB816242F94A70016B04D /* SceneDelegate.swift */; };
-		3F5EB819242F94A70016B04D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB818242F94A70016B04D /* ViewController.swift */; };
+		3F5EB819242F94A70016B04D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB818242F94A70016B04D /* MainTabViewController.swift */; };
 		3F5EB81E242F94AD0016B04D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F5EB81D242F94AD0016B04D /* Assets.xcassets */; };
 		3F5EB821242F94AD0016B04D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5EB81F242F94AD0016B04D /* LaunchScreen.storyboard */; };
+		3F5EB829242FC61F0016B04D /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB828242FC61F0016B04D /* ExchangeRateViewController.swift */; };
+		3F5EB82B242FC9C90016B04D /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB82A242FC9C90016B04D /* AlarmViewController.swift */; };
+		3F5EB82D242FCC2A0016B04D /* CurrencyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB82C242FCC2A0016B04D /* CurrencyPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F5EB811242F94A70016B04D /* ExchangeRatesAppChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRatesAppChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5EB814242F94A70016B04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F5EB816242F94A70016B04D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F5EB818242F94A70016B04D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F5EB818242F94A70016B04D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		3F5EB81D242F94AD0016B04D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F5EB820242F94AD0016B04D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F5EB822242F94AD0016B04D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F5EB828242FC61F0016B04D /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
+		3F5EB82A242FC9C90016B04D /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		3F5EB82C242FCC2A0016B04D /* CurrencyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,10 @@
 			children = (
 				3F5EB814242F94A70016B04D /* AppDelegate.swift */,
 				3F5EB816242F94A70016B04D /* SceneDelegate.swift */,
-				3F5EB818242F94A70016B04D /* ViewController.swift */,
+				3F5EB818242F94A70016B04D /* MainTabViewController.swift */,
+				3F5EB82A242FC9C90016B04D /* AlarmViewController.swift */,
+				3F5EB828242FC61F0016B04D /* ExchangeRateViewController.swift */,
+				3F5EB82C242FCC2A0016B04D /* CurrencyPickerView.swift */,
 				3F5EB81D242F94AD0016B04D /* Assets.xcassets */,
 				3F5EB81F242F94AD0016B04D /* LaunchScreen.storyboard */,
 				3F5EB822242F94AD0016B04D /* Info.plist */,
@@ -134,8 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F5EB819242F94A70016B04D /* ViewController.swift in Sources */,
+				3F5EB82B242FC9C90016B04D /* AlarmViewController.swift in Sources */,
+				3F5EB82D242FCC2A0016B04D /* CurrencyPickerView.swift in Sources */,
+				3F5EB819242F94A70016B04D /* MainTabViewController.swift in Sources */,
 				3F5EB815242F94A70016B04D /* AppDelegate.swift in Sources */,
+				3F5EB829242FC61F0016B04D /* ExchangeRateViewController.swift in Sources */,
 				3F5EB817242F94A70016B04D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

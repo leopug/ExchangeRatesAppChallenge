@@ -14,12 +14,8 @@ class CurrencyPickerView: UIView {
         UIPickerViewDelegate & UIPickerViewDataSource
     
     var picker: UIPickerView!
-    var viewModel: CurrencyPickerViewModel!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
+    weak var viewModel: CurrencyPickerViewModel!
+    var labelTo: UILabel!
     
     init(viewModel: CurrencyPickerViewModel, frame: CGRect) {
         super.init(frame: frame)
@@ -32,12 +28,20 @@ class CurrencyPickerView: UIView {
     }
     
     func setupView(){
-        setupBaseCurrencyPicker()
-        setupTargetCurrencyPicker()
+        setupPicker()
+        setupLabelTo()
         setupConstraints()
     }
     
-    func setupBaseCurrencyPicker() {
+    func setupLabelTo(){
+        labelTo = UILabel()
+        labelTo.translatesAutoresizingMaskIntoConstraints = false
+        labelTo.text = "TO"
+        labelTo.textAlignment = .center
+        addSubview(labelTo)
+    }
+    
+    func setupPicker() {
         picker = UIPickerView()
         picker.delegate = viewModel
         picker.dataSource = viewModel
@@ -45,18 +49,18 @@ class CurrencyPickerView: UIView {
         addSubview(picker)
     }
     
-    func setupTargetCurrencyPicker() {
-        
-    }
-    
     func setupConstraints(){
         NSLayoutConstraint.activate([
          
          picker.topAnchor.constraint(equalTo: self.topAnchor),
          picker.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
-         picker.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 50),
-         picker.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+         picker.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
+         picker.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
          picker.heightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.heightAnchor),
+         
+         labelTo.topAnchor.constraint(equalTo: self.topAnchor),
+         labelTo.centerXAnchor.constraint(equalTo: picker.safeAreaLayoutGuide.centerXAnchor),
+         labelTo.centerYAnchor.constraint(equalTo: picker.safeAreaLayoutGuide.centerYAnchor)
 
         ])
     }

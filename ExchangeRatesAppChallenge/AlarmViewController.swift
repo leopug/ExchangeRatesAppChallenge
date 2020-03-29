@@ -10,22 +10,51 @@ import UIKit
 
 class AlarmViewController: UIViewController {
 
+    var tableView: UITableView!
+    var viewModel: AlarmViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .purple
+        title = "Rate Alarms"
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAlarm))
+        
+        viewModel = AlarmViewModel()
 
+        setupTableView()
+        
+        setupConstraints()
+        
+    }
+
+    func setupTableView() {
+        
+        tableView = UITableView()
+        tableView.delegate = viewModel
+        tableView.dataSource = viewModel
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.addSubview(tableView)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func addAlarm() {
+        print("alarm added")
     }
-    */
+    
+    func setupConstraints(){
+        NSLayoutConstraint.activate([
+         
+         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+         tableView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+         tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+         tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
 
+        ])
+    }
+    
 }

@@ -20,8 +20,9 @@ class MainTabViewController: UITabBarController {
         viewControllers?.append(exchangeView)
         
         let alarmView = AlarmViewController()
+        let navigationController = UINavigationController(rootViewController: alarmView)
         alarmView.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
-        viewControllers = [exchangeView,alarmView]
+        viewControllers = [exchangeView,navigationController]
         
     }
 

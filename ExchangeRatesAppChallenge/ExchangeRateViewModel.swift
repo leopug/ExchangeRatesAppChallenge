@@ -28,13 +28,20 @@ class ExchangeRateViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-
-            if component == 0 {
-                return baseCurrencyDataSource[row]
-            } else {
-                return targetCurrencyDataSource[row]
-            }
+        
+        if component == 0 {
+            return baseCurrencyDataSource[row]
+        } else {
+            return targetCurrencyDataSource[row]
+        }
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        print("selected row \(row) of component \(component) with value \(component==0 ? baseCurrencyDataSource[row] : targetCurrencyDataSource[row])")
 
     }
+    
     
 }

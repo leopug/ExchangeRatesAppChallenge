@@ -23,10 +23,12 @@ class AlarmViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = alarmManager.alarms[indexPath.row]
+        cell.textLabel?.text = alarmManager.alarms[indexPath.row].price.description
         return cell
     }
     
-    
+    func addAlarm(_ newAlarm: Alarm) {
+        alarmManager.addAlarm(newAlarm)
+    }
     
 }

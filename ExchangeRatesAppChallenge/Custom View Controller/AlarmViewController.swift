@@ -42,7 +42,14 @@ class AlarmViewController: UIViewController {
     }
     
     @objc func addAlarm() {
-        print("alarm added")
+        let newAlarm = Alarm(price: 12.3,
+                             baseCurrency: .BRL ,
+                             targeCurrency: .DOL,
+                             operation: .more)
+        
+        viewModel.addAlarm(newAlarm)
+        
+        tableView.reloadData()
     }
     
     func setupConstraints(){

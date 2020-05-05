@@ -12,8 +12,19 @@ import UIKit
 
 class ExchangeRateViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var baseCurrencyDataSource = ["USD","BRL","EURO"]
-    var targetCurrencyDataSource = ["USD","BRL","EURO"]    
+    var currencyManager = CurrencyManager()
+    var baseCurrencyDataSource : [String]!
+    var targetCurrencyDataSource : [String]!
+    
+    override init() {
+        super.init()
+        self.configure()
+    }
+    
+    func configure() {
+        baseCurrencyDataSource = currencyManager.currenciesDescription
+        targetCurrencyDataSource = currencyManager.currenciesDescription
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
             return 2

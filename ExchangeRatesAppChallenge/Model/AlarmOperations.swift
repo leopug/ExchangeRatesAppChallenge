@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Operations {
+enum AlarmOperations {
     case more
     case moreOrEqual
     case less

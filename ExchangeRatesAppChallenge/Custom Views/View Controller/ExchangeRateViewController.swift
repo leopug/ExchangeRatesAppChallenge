@@ -33,10 +33,8 @@ class ExchangeRateViewController: UIViewController {
     }
     
     func setupExchangeTitle(){
-        exchangeTitle = UILabel()
-        exchangeTitle.translatesAutoresizingMaskIntoConstraints = false
+        exchangeTitle = ERTitleLabel(fontSize: 44, textAlignment: .center)
         exchangeTitle.text = "DOLAR'AMA APP"
-        exchangeTitle.textAlignment = .center
         exchangeTitle.backgroundColor = .white
         view.addSubview(exchangeTitle)
     }
@@ -47,7 +45,7 @@ class ExchangeRateViewController: UIViewController {
         rateValue.text = "49.3"
         rateValue.textAlignment = .center
         rateValue.backgroundColor = .red
-        rateValue.font = UIFont(name: "Times new roman", size: 59)
+        rateValue.font = UIFont.preferredFont(forTextStyle: .largeTitle)
         view.addSubview(rateValue)
     }
     
@@ -55,6 +53,7 @@ class ExchangeRateViewController: UIViewController {
         currencyPicker = CurrencyPickerView(viewModel: viewModel, frame: CGRect())
         currencyPicker.translatesAutoresizingMaskIntoConstraints = false
         currencyPicker.backgroundColor = .white
+        
         view.addSubview(currencyPicker)
     }
     

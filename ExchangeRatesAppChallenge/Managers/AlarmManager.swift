@@ -9,7 +9,7 @@
 import Foundation
 
 
-class AlarmManagerModel {
+class AlarmManager {
     
     var alarms : [Alarm] = [Alarm(price: 12.3,
                                   baseCurrency: .BRL ,

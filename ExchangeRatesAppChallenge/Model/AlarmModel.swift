@@ -8,9 +8,10 @@
 
 import Foundation
 
-struct Alarm {
-    var price : Decimal
-    var baseCurrency : Currency
-    var targeCurrency :  Currency
-    var operation : Operations
+struct Alarm: Hashable {
+    let identifier: UUID = UUID()
+    let price : Decimal
+    let baseCurrency : Currency
+    let targeCurrency :  Currency
+    let operation : AlarmOperations
 }

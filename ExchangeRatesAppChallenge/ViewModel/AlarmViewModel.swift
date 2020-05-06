@@ -9,26 +9,21 @@
 import Foundation
 import UIKit
 
-class AlarmViewModel: NSObject, UITableViewDelegate, UITableViewDataSource {
+class AlarmViewModel: NSObject {
     
-    var alarmManager: AlarmManagerModel!
+    var alarmManager: AlarmManager!
+    
     
     override init() {
-        alarmManager = AlarmManagerModel()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return alarmManager.alarms.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = alarmManager.alarms[indexPath.row].price.description
-        return cell
+        alarmManager = AlarmManager()
     }
     
     func addAlarm(_ newAlarm: Alarm) {
         alarmManager.addAlarm(newAlarm)
+    }
+    
+    func getAlarms() -> [Alarm] {
+        return alarmManager.alarms
     }
     
 }

@@ -27,16 +27,17 @@ class AlarmCardViewCell: UICollectionViewCell {
     }
     
     func configure() {
-        addSubview(baseCurrency)
         translatesAutoresizingMaskIntoConstraints = false
         let padding : CGFloat = 8
-    
+        layer.cornerRadius = 10
+        backgroundColor = .systemGray2
+        addSubview(baseCurrency)
+        
         NSLayoutConstraint.activate([
-            
-            baseCurrency.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 12),
+            baseCurrency.topAnchor.constraint(equalTo: contentView.topAnchor),
             baseCurrency.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             baseCurrency.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            baseCurrency.heightAnchor.constraint(equalToConstant: 20)
+            baseCurrency.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

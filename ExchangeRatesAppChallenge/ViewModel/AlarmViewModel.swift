@@ -11,12 +11,7 @@ import UIKit
 
 class AlarmViewModel: NSObject {
     
-    var alarmManager: AlarmManager!
-    
-    
-    override init() {
-        alarmManager = AlarmManager()
-    }
+    var alarmManager: AlarmManager = AlarmManager()
     
     func addAlarm(_ newAlarm: Alarm) {
         alarmManager.addAlarm(newAlarm)

@@ -11,10 +11,7 @@ import Foundation
 
 class AlarmManager {
     
-    var alarms : [Alarm] = [Alarm(price: 12.3,
-                                  baseCurrency: .BRL ,
-                                  targeCurrency: .DOL,
-                                  operation: .more)]
+    var alarms : [Alarm] = []
     
     func addAlarm(_ newAlarm: Alarm){
         alarms.append(newAlarm)

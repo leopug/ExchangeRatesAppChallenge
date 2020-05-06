@@ -30,10 +30,7 @@ class AlarmViewController: UIViewController {
         setupConstraints()
         
         configureDataSource()
-        
-        addAlarm()
-        updateData(on: viewModel.getAlarms())
-        
+                
     }
 
     fileprivate func setuoViewController() {
@@ -54,7 +51,14 @@ class AlarmViewController: UIViewController {
     }
     
      func createThreeColumnFlowLayout()-> UICollectionViewFlowLayout {
+        let width = view.bounds.width
+        let verticalPadding: CGFloat = 6
+        let horizontalPadding: CGFloat = 6
+        let itemWidth = width - horizontalPadding*2
+        
         let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets(top: verticalPadding, left: horizontalPadding, bottom: verticalPadding, right: horizontalPadding)
+        flowLayout.itemSize = CGSize(width: itemWidth, height: 50)
         return flowLayout
     }
     
@@ -66,10 +70,10 @@ class AlarmViewController: UIViewController {
         })
     }
     
-    func updateData(on followers: [Alarm]) {
+    func updateData(on alarms: [Alarm]) {
         var snapshot = NSDiffableDataSourceSnapshot<Section,Alarm>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(viewModel.getAlarms())
+        snapshot.appendItems(alarms)
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot, animatingDifferences: true)
         }
@@ -83,6 +87,7 @@ class AlarmViewController: UIViewController {
         
         viewModel.addAlarm(newAlarm)
         updateData(on: viewModel.getAlarms())
+        print(viewModel.getAlarms().count,"what the hell")
     }
     
     func setupConstraints(){

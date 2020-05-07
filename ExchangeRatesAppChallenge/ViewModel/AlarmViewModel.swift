@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class AlarmViewModel: NSObject {
+protocol AlarmOrchestrator {
+    func addAlarm(_ newAlarm:Alarm)
+    func getAlarms() -> [Alarm]
+}
+
+class AlarmViewModel: NSObject, AlarmOrchestrator {
     
     var alarmManager: AlarmManager = AlarmManager()
     

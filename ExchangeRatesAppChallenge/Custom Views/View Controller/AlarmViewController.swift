@@ -15,13 +15,13 @@ enum Section {
 class AlarmViewController: UIViewController {
 
     var collectionView: UICollectionView!
-    var viewModel: AlarmViewModel!
+    var viewModel: AlarmOrchestrator!
     var dataSource : UICollectionViewDiffableDataSource<Section,Alarm>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setuoViewController()
+        setupViewController()
         
         viewModel = AlarmViewModel()
 
@@ -33,7 +33,7 @@ class AlarmViewController: UIViewController {
                 
     }
 
-    fileprivate func setuoViewController() {
+    fileprivate func setupViewController() {
         view.backgroundColor = .purple
         title = "Rate Alarms"
         navigationController?.navigationItem.largeTitleDisplayMode = .always
@@ -42,7 +42,7 @@ class AlarmViewController: UIViewController {
     }
     
     func setupCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createFlowLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .systemBackground
         collectionView.register(AlarmCardViewCell.self, forCellWithReuseIdentifier: AlarmCardViewCell.reuseID)
@@ -50,7 +50,7 @@ class AlarmViewController: UIViewController {
         
     }
     
-     func createThreeColumnFlowLayout()-> UICollectionViewFlowLayout {
+     func createFlowLayout()-> UICollectionViewFlowLayout {
         let width = view.bounds.width
         let verticalPadding: CGFloat = 6
         let horizontalPadding: CGFloat = 6

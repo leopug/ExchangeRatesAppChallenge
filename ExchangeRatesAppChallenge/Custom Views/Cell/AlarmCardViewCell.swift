@@ -10,6 +10,7 @@ import UIKit
 
 class AlarmCardViewCell: UICollectionViewCell {
     static let reuseID = "alarmCellID"
+    var gl:CAGradientLayer!
     
     let baseCurrency = ERTitleLabel(fontSize: 16, textAlignment: .center)
     
@@ -26,13 +27,25 @@ class AlarmCardViewCell: UICollectionViewCell {
         baseCurrency.text = alarm.baseCurrency.rawValue
     }
     
+    fileprivate func setGradientColor() {
+        let colorTop = UIColor.white.cgColor
+        let colorBottom = UIColor(red: 0.941 , green: 0.818, blue: .zero, alpha: 1.0).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.bounds
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.cornerRadius = 12
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
     func configure() {
         translatesAutoresizingMaskIntoConstraints = false
         let padding : CGFloat = 8
-        layer.cornerRadius = 10
-        backgroundColor = .systemGray2
-        addSubview(baseCurrency)
         
+        setGradientColor()
+        
+        addSubview(baseCurrency)
+
         NSLayoutConstraint.activate([
             baseCurrency.topAnchor.constraint(equalTo: contentView.topAnchor),
             baseCurrency.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),

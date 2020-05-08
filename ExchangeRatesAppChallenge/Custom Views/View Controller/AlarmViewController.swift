@@ -80,7 +80,7 @@ class AlarmViewController: UIViewController {
         
         viewModel.addAlarm(newAlarm)
         updateData(on: viewModel.getAlarms())
-        print(viewModel.getAlarms().count,"what the hell")
+        print(viewModel.getAlarms().count," what the hell")
         
         let alarmDetailVC = AlarmDetailViewController()
         present(alarmDetailVC,animated: true)

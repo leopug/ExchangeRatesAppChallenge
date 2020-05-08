@@ -1,11 +1,3 @@
-//
-//  ExchangeRateViewModel.swift
-//  ExchangeRatesAppChallenge
-//
-//  Created by Ana Caroline de Souza on 28/03/20.
-//  Copyright © 2020 Ian e Leo Corp. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -18,8 +10,8 @@ protocol CurrencyReceivable {
 class PickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var currencyManager = CurrencyManager()
-    var baseCurrencyDataSource : [String]!
-    var targetCurrencyDataSource : [String]!
+    var baseCurrency : [String]!
+    var targetCurrency : [String]!
     var currencyReceivable: CurrencyReceivable!
     var baseRow = 0
     var targetRow = 0
@@ -31,8 +23,8 @@ class PickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func configure() {
-        baseCurrencyDataSource = CurrencyManager.currenciesDescription
-        targetCurrencyDataSource = CurrencyManager.currenciesDescription
+        baseCurrency = CurrencyManager.currenciesDescription
+        targetCurrency = CurrencyManager.currenciesDescription
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -41,35 +33,32 @@ class PickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0 {
-            return baseCurrencyDataSource.count
+            return baseCurrency.count
         } else {
-            return targetCurrencyDataSource.count
+            return targetCurrency.count
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if component == 0 {
-            return baseCurrencyDataSource[row]
+            return baseCurrency[row]
         } else {
-            return targetCurrencyDataSource[row]
+            return targetCurrency[row]
         }
         
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-//        print("selected row \(row) of component \(component) with value \(component==0 ? baseCurrencyDataSource[row] : targetCurrencyDataSource[row])")
-        
         if component == 0 {
             baseRow = row
         } else {
             targetRow = row
         }
+        
         if(baseRow != targetRow) {
-        currencyReceivable.receiveCurrencies(base: Currency.getCurrency(currency: baseCurrencyDataSource[baseRow]), target: Currency.getCurrency(currency: targetCurrencyDataSource[targetRow]))
+        currencyReceivable.receiveCurrencies(base: Currency(currency: baseCurrency[baseRow]), target: Currency(currency: targetCurrency[targetRow]))
         }
     }
-    
-    
 }

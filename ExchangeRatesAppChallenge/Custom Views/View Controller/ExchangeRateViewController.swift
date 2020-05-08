@@ -2,9 +2,9 @@ import UIKit
 
 class ExchangeRateViewController: UIViewController {
 
-    var exchangeTitle: UILabel!
-    var rateValue: UILabel!
-    var currencyPicker: CurrencyPickerView!
+    var exchangeTitleLabel: UILabel!
+    var rateValueLabel: UILabel!
+    var currencyPickerView: CurrencyPickerView!
     var pickerViewModel: PickerViewModel!
     var exchangeRateViewModel: ExchangeRateViewModel!
     
@@ -28,50 +28,50 @@ class ExchangeRateViewController: UIViewController {
     }
     
     func setupExchangeTitle(){
-        exchangeTitle = ERTitleLabel(fontSize: 44, textAlignment: .center)
-        exchangeTitle.text = "DOLAR'AMA APP"
-        exchangeTitle.backgroundColor = .white
-        view.addSubview(exchangeTitle)
+        exchangeTitleLabel = ERTitleLabel(fontSize: 44, textAlignment: .center)
+        exchangeTitleLabel.text = "DOLAR'AMA APP"
+        exchangeTitleLabel.backgroundColor = .white
+        view.addSubview(exchangeTitleLabel)
     }
     
     func setupExchangeValue(){
-        rateValue = UILabel()
-        rateValue.translatesAutoresizingMaskIntoConstraints = false
-        rateValue.text = "49.3"
-        rateValue.textAlignment = .center
-        rateValue.backgroundColor = .red
-        rateValue.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        view.addSubview(rateValue)
+        rateValueLabel = UILabel()
+        rateValueLabel.translatesAutoresizingMaskIntoConstraints = false
+        rateValueLabel.text = "49.3"
+        rateValueLabel.textAlignment = .center
+        rateValueLabel.backgroundColor = .red
+        rateValueLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        view.addSubview(rateValueLabel)
     }
     
     func setupCurrencyPicker(){
-        currencyPicker = CurrencyPickerView(viewModel: pickerViewModel, frame: CGRect())
-        currencyPicker.translatesAutoresizingMaskIntoConstraints = false
-        currencyPicker.backgroundColor = .white
+        currencyPickerView = CurrencyPickerView(viewModel: pickerViewModel, frame: .zero)
+        currencyPickerView.translatesAutoresizingMaskIntoConstraints = false
+        currencyPickerView.backgroundColor = .white
         
-        view.addSubview(currencyPicker)
+        view.addSubview(currencyPickerView)
     }
     
     func setupConstraints(){
         NSLayoutConstraint.activate([
          
-         exchangeTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-         exchangeTitle.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-         exchangeTitle.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-         exchangeTitle.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-         exchangeTitle.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.2),
+         exchangeTitleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+         exchangeTitleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+         exchangeTitleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+         exchangeTitleLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+         exchangeTitleLabel.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.2),
 
-         rateValue.topAnchor.constraint(equalTo: exchangeTitle.bottomAnchor),
-         rateValue.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-         rateValue.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-         rateValue.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+         rateValueLabel.topAnchor.constraint(equalTo: exchangeTitleLabel.bottomAnchor),
+         rateValueLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+         rateValueLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+         rateValueLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
 
-         currencyPicker.topAnchor.constraint(equalTo: rateValue.bottomAnchor),
-         currencyPicker.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-         currencyPicker.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-         currencyPicker.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-         currencyPicker.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.25),
-         currencyPicker.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+         currencyPickerView.topAnchor.constraint(equalTo: rateValueLabel.bottomAnchor),
+         currencyPickerView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+         currencyPickerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+         currencyPickerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+         currencyPickerView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.25),
+         currencyPickerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 

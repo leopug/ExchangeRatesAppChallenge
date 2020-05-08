@@ -12,18 +12,10 @@ enum Currency: String, CaseIterable {
     case BRL
     case DOL
     case EURO
+    case UNKNOWN
     
-    static func getCurrency(currency: String)-> Currency {
-        switch currency {
-        case "BRL":
-            return .BRL
-        case "DOL":
-            return .DOL
-        case "EURO":
-            return .EURO
-        default:
-            fatalError()
-        }
+    init(currency: String) {
+        self = Currency(rawValue: currency) ?? .UNKNOWN
     }
     
 }
@@ -48,6 +40,8 @@ extension Currency: Codable {
             self = .DOL
         case 2:
             self = .EURO
+        case 3:
+            self = .UNKNOWN
         default:
             throw CodingError.unknownValue
         }
@@ -62,6 +56,8 @@ extension Currency: Codable {
             try container.encode(1, forKey: .rawValue)
         case .EURO:
             try container.encode(2, forKey: .rawValue)
+        case .UNKNOWN:
+            try container.encode(3, forKey: .rawValue)
         }
     }
 }

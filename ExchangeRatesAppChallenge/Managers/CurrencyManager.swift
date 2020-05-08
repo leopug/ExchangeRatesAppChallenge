@@ -2,20 +2,8 @@ import Foundation
 
 class CurrencyManager {
     
-    static var currenciesDescription : [String] {
-        var array : [String] = []
-        for currency in Currency.allCases {
-            array.append(currency.rawValue)
-        }
-        return array
-    }
-    
-    static var currenciesOperationsDescription: [String] {
-        var array : [String] = []
-        for operation in AlarmOperations.allCases {
-            array.append(operation.rawValue)
-        }
-        return array
-    }
+    static let currenciesDescription = Currency.allCases.filter { $0 != .UNKNOWN }.map { $0.rawValue }
+
+    static let currenciesOperationsDescription = AlarmOperations.allCases.map { $0.rawValue }
     
 }

@@ -2,13 +2,13 @@ import UIKit
 
 class CurrencyPickerView: UIView {
 
-    typealias CurrencyPickerViewModel = UIPickerViewDelegate & UIPickerViewDataSource
+    typealias CurrencyPickerController = UIPickerViewDelegate & UIPickerViewDataSource
     
     var picker: UIPickerView!
-    weak var viewModel: CurrencyPickerViewModel!
+    weak var viewModel: CurrencyPickerController!
     var labelTo: UILabel!
     
-    init(viewModel: CurrencyPickerViewModel, frame: CGRect) {
+    init(viewModel: CurrencyPickerController, frame: CGRect) {
         super.init(frame: frame)
         self.viewModel = viewModel
         setupView()

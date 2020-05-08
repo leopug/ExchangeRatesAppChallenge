@@ -1,6 +1,6 @@
 import Foundation
 
-class CurrencyManager {
+struct CurrencyManager {
     
     static let currenciesDescription = Currency.allCases.filter { $0 != .UNKNOWN }.map { $0.rawValue }
 

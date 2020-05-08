@@ -5,7 +5,7 @@ class ExchangeRateViewController: UIViewController {
     var exchangeTitleLabel: UILabel!
     var rateValueLabel: UILabel!
     var currencyPickerView: CurrencyPickerView!
-    var pickerViewModel: PickerViewModel!
+    var pickerViewModel: CurrencyPickerHandler!
     var exchangeRateViewModel: ExchangeRateViewModel!
     
     override func viewDidLoad() {
@@ -15,7 +15,7 @@ class ExchangeRateViewController: UIViewController {
         
         exchangeRateViewModel = ExchangeRateViewModel()
         
-        pickerViewModel = PickerViewModel(currencyReceivable: exchangeRateViewModel)
+        pickerViewModel = CurrencyPickerHandler(currencyReceivable: exchangeRateViewModel)
         
         setupExchangeTitle()
         

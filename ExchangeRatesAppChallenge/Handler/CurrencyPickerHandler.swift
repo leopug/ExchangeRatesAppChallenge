@@ -2,17 +2,14 @@ import Foundation
 import UIKit
 
 protocol CurrencyReceivable {
-    
     func receiveCurrencies(base: Currency, target: Currency)
-    
 }
 
-class PickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
+class CurrencyPickerHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    var currencyManager = CurrencyManager()
     var baseCurrency : [String]!
     var targetCurrency : [String]!
-    var currencyReceivable: CurrencyReceivable!
+    let currencyReceivable: CurrencyReceivable?
     var baseRow = 0
     var targetRow = 0
     
@@ -58,7 +55,7 @@ class PickerViewModel: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         }
         
         if(baseRow != targetRow) {
-        currencyReceivable.receiveCurrencies(base: Currency(currency: baseCurrency[baseRow]), target: Currency(currency: targetCurrency[targetRow]))
+        currencyReceivable?.receiveCurrencies(base: Currency(currency: baseCurrency[baseRow]), target: Currency(currency: targetCurrency[targetRow]))
         }
     }
 }

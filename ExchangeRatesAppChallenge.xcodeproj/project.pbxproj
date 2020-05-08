@@ -17,6 +17,8 @@
 		3F2EE99E24632EA3006F8AA1 /* AlarmCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EE99D24632EA3006F8AA1 /* AlarmCardViewCell.swift */; };
 		3F2EE9A624658FAD006F8AA1 /* OperationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EE9A524658FAD006F8AA1 /* OperationPickerView.swift */; };
 		3F2EE9A824659A1F006F8AA1 /* ExchangeRateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EE9A724659A1F006F8AA1 /* ExchangeRateViewModel.swift */; };
+		3F2EE9AB2465EAD2006F8AA1 /* AlarmOperationsPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EE9AA2465EAD2006F8AA1 /* AlarmOperationsPickerHandler.swift */; };
+		3F2EE9AD2465EC66006F8AA1 /* AlarmOperationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2EE9AC2465EC66006F8AA1 /* AlarmOperationsManager.swift */; };
 		3F5EB815242F94A70016B04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB814242F94A70016B04D /* AppDelegate.swift */; };
 		3F5EB817242F94A70016B04D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB816242F94A70016B04D /* SceneDelegate.swift */; };
 		3F5EB819242F94A70016B04D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB818242F94A70016B04D /* MainTabViewController.swift */; };
@@ -24,7 +26,7 @@
 		3F5EB829242FC61F0016B04D /* ExchangeRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB828242FC61F0016B04D /* ExchangeRateViewController.swift */; };
 		3F5EB82B242FC9C90016B04D /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB82A242FC9C90016B04D /* AlarmViewController.swift */; };
 		3F5EB82D242FCC2A0016B04D /* CurrencyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB82C242FCC2A0016B04D /* CurrencyPickerView.swift */; };
-		3F5EB82F242FD8BD0016B04D /* PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB82E242FD8BD0016B04D /* PickerViewModel.swift */; };
+		3F5EB82F242FD8BD0016B04D /* CurrencyPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB82E242FD8BD0016B04D /* CurrencyPickerHandler.swift */; };
 		3F5EB831243115080016B04D /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB830243115080016B04D /* AlarmViewModel.swift */; };
 		3F5EB833243115B50016B04D /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB832243115B50016B04D /* AlarmManager.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		3F2EE99D24632EA3006F8AA1 /* AlarmCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCardViewCell.swift; sourceTree = "<group>"; };
 		3F2EE9A524658FAD006F8AA1 /* OperationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationPickerView.swift; sourceTree = "<group>"; };
 		3F2EE9A724659A1F006F8AA1 /* ExchangeRateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewModel.swift; sourceTree = "<group>"; };
+		3F2EE9AA2465EAD2006F8AA1 /* AlarmOperationsPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOperationsPickerHandler.swift; sourceTree = "<group>"; };
+		3F2EE9AC2465EC66006F8AA1 /* AlarmOperationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOperationsManager.swift; sourceTree = "<group>"; };
 		3F5EB811242F94A70016B04D /* ExchangeRatesAppChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRatesAppChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5EB814242F94A70016B04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F5EB816242F94A70016B04D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +53,7 @@
 		3F5EB828242FC61F0016B04D /* ExchangeRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateViewController.swift; sourceTree = "<group>"; };
 		3F5EB82A242FC9C90016B04D /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		3F5EB82C242FCC2A0016B04D /* CurrencyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerView.swift; sourceTree = "<group>"; };
-		3F5EB82E242FD8BD0016B04D /* PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewModel.swift; sourceTree = "<group>"; };
+		3F5EB82E242FD8BD0016B04D /* CurrencyPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerHandler.swift; sourceTree = "<group>"; };
 		3F5EB830243115080016B04D /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
 		3F5EB832243115B50016B04D /* AlarmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				3F5EB830243115080016B04D /* AlarmViewModel.swift */,
-				3F5EB82E242FD8BD0016B04D /* PickerViewModel.swift */,
 				3F2EE9A724659A1F006F8AA1 /* ExchangeRateViewModel.swift */,
 			);
 			path = ViewModel;
@@ -119,6 +122,7 @@
 			children = (
 				3F2EE98E2461F604006F8AA1 /* CurrencyManager.swift */,
 				3F5EB832243115B50016B04D /* AlarmManager.swift */,
+				3F2EE9AC2465EC66006F8AA1 /* AlarmOperationsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -159,6 +163,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		3F2EE9A92465DD75006F8AA1 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				3F5EB82E242FD8BD0016B04D /* CurrencyPickerHandler.swift */,
+				3F2EE9AA2465EAD2006F8AA1 /* AlarmOperationsPickerHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		3F5EB808242F94A70016B04D = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +191,7 @@
 		3F5EB813242F94A70016B04D /* ExchangeRatesAppChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				3F2EE9A92465DD75006F8AA1 /* Handler */,
 				3F2EE99B24632D7D006F8AA1 /* Custom Views */,
 				3F2EE9872461EB23006F8AA1 /* ViewModel */,
 				3F2EE9902461F612006F8AA1 /* Managers */,
@@ -264,8 +278,10 @@
 				3F5EB82D242FCC2A0016B04D /* CurrencyPickerView.swift in Sources */,
 				3F2EE9922461F7AF006F8AA1 /* AlarmOperations.swift in Sources */,
 				3F5EB819242F94A70016B04D /* MainTabViewController.swift in Sources */,
+				3F2EE9AB2465EAD2006F8AA1 /* AlarmOperationsPickerHandler.swift in Sources */,
 				3F2EE99E24632EA3006F8AA1 /* AlarmCardViewCell.swift in Sources */,
 				3F2EE99A2462D815006F8AA1 /* ERTitleLabel.swift in Sources */,
+				3F2EE9AD2465EC66006F8AA1 /* AlarmOperationsManager.swift in Sources */,
 				3F2EE9A624658FAD006F8AA1 /* OperationPickerView.swift in Sources */,
 				3F5EB815242F94A70016B04D /* AppDelegate.swift in Sources */,
 				3F2EE9972462D7B2006F8AA1 /* AlarmDetailViewController.swift in Sources */,
@@ -273,7 +289,7 @@
 				3F2EE98B2461F45F006F8AA1 /* AlarmModel.swift in Sources */,
 				3F2EE98D2461F51B006F8AA1 /* Currency.swift in Sources */,
 				3F5EB833243115B50016B04D /* AlarmManager.swift in Sources */,
-				3F5EB82F242FD8BD0016B04D /* PickerViewModel.swift in Sources */,
+				3F5EB82F242FD8BD0016B04D /* CurrencyPickerHandler.swift in Sources */,
 				3F5EB829242FC61F0016B04D /* ExchangeRateViewController.swift in Sources */,
 				3F2EE98F2461F604006F8AA1 /* CurrencyManager.swift in Sources */,
 				3F5EB817242F94A70016B04D /* SceneDelegate.swift in Sources */,

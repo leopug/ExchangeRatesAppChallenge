@@ -1,11 +1,3 @@
-//
-//  ExchangeRateViewController.swift
-//  ExchangeRatesAppChallenge
-//
-//  Created by Ana Caroline de Souza on 28/03/20.
-//  Copyright © 2020 Ian e Leo Corp. All rights reserved.
-//
-
 import UIKit
 
 class ExchangeRateViewController: UIViewController {
@@ -13,14 +5,17 @@ class ExchangeRateViewController: UIViewController {
     var exchangeTitle: UILabel!
     var rateValue: UILabel!
     var currencyPicker: CurrencyPickerView!
-    var viewModel: ExchangeRateViewModel!
+    var pickerViewModel: PickerViewModel!
+    var exchangeRateViewModel: ExchangeRateViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .black
         
-        viewModel = ExchangeRateViewModel()
+        exchangeRateViewModel = ExchangeRateViewModel()
+        
+        pickerViewModel = PickerViewModel(currencyReceivable: exchangeRateViewModel)
         
         setupExchangeTitle()
         
@@ -50,7 +45,7 @@ class ExchangeRateViewController: UIViewController {
     }
     
     func setupCurrencyPicker(){
-        currencyPicker = CurrencyPickerView(viewModel: viewModel, frame: CGRect())
+        currencyPicker = CurrencyPickerView(viewModel: pickerViewModel, frame: CGRect())
         currencyPicker.translatesAutoresizingMaskIntoConstraints = false
         currencyPicker.backgroundColor = .white
         

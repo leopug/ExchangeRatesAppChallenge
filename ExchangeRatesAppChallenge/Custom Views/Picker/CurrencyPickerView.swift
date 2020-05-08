@@ -1,17 +1,8 @@
-//
-//  CurrencyPickerView.swift
-//  ExchangeRatesAppChallenge
-//
-//  Created by Ana Caroline de Souza on 28/03/20.
-//  Copyright © 2020 Ian e Leo Corp. All rights reserved.
-//
-
 import UIKit
 
 class CurrencyPickerView: UIView {
 
-    typealias CurrencyPickerViewModel =
-        UIPickerViewDelegate & UIPickerViewDataSource
+    typealias CurrencyPickerViewModel = UIPickerViewDelegate & UIPickerViewDataSource
     
     var picker: UIPickerView!
     weak var viewModel: CurrencyPickerViewModel!

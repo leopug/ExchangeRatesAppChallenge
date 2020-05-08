@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Alarm: Hashable {
+struct Alarm: Hashable, Codable {
     let identifier: UUID = UUID()
     let price : Decimal
     let baseCurrency : Currency

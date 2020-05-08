@@ -1,10 +1,3 @@
-//
-//  AlarmViewController.swift
-//  ExchangeRatesAppChallenge
-//
-//  Created by Ana Caroline de Souza on 28/03/20.
-//  Copyright © 2020 Ian e Leo Corp. All rights reserved.
-//
 
 import UIKit
 
@@ -88,6 +81,10 @@ class AlarmViewController: UIViewController {
         viewModel.addAlarm(newAlarm)
         updateData(on: viewModel.getAlarms())
         print(viewModel.getAlarms().count,"what the hell")
+        
+        let alarmDetailVC = AlarmDetailViewController()
+        present(alarmDetailVC,animated: true)
+        
     }
     
     func setupConstraints(){

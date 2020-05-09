@@ -83,7 +83,8 @@ class AlarmViewController: UIViewController {
         print(viewModel.getAlarms().count," what the hell")
         
         let alarmDetailVC = AlarmDetailViewController()
-        present(alarmDetailVC,animated: true)
+        let navController = UINavigationController(rootViewController: alarmDetailVC)
+        present(navController,animated: true)
         
     }
     

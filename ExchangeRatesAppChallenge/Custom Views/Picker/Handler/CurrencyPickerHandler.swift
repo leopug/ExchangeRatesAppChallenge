@@ -9,7 +9,7 @@ class CurrencyPickerHandler: NSObject, UIPickerViewDelegate, UIPickerViewDataSou
     
     var baseCurrency : [String]!
     var targetCurrency : [String]!
-    let currencyReceivable: CurrencyReceivable?
+    var currencyReceivable: CurrencyReceivable!
     var baseRow = 0
     var targetRow = 0
     

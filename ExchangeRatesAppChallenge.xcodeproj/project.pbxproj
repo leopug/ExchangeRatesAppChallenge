@@ -101,6 +101,7 @@
 		3F2EE9882461EC0E006F8AA1 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				3F2EE9A92465DD75006F8AA1 /* Handler */,
 				3F5EB82C242FCC2A0016B04D /* CurrencyPickerView.swift */,
 				3F2EE9A524658FAD006F8AA1 /* OperationPickerView.swift */,
 			);
@@ -191,7 +192,6 @@
 		3F5EB813242F94A70016B04D /* ExchangeRatesAppChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				3F2EE9A92465DD75006F8AA1 /* Handler */,
 				3F2EE99B24632D7D006F8AA1 /* Custom Views */,
 				3F2EE9872461EB23006F8AA1 /* ViewModel */,
 				3F2EE9902461F612006F8AA1 /* Managers */,

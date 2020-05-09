@@ -11,7 +11,7 @@ import UIKit
 
 class AlarmOperationsPickerHandler : NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    let alar
+    let alarmOperations = AlarmOperationsManager.operationsDecription
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -19,7 +19,7 @@ class AlarmOperationsPickerHandler : NSObject, UIPickerViewDelegate, UIPickerVie
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        <#code#>
+        return alarmOperations.count
     }
     
     

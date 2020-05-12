@@ -23,7 +23,7 @@ class AlarmViewModel: NSObject, AlarmOrchestrator {
     }
     
     func getAlarms() -> [Alarm] {
-        return alarmManager.alarms
+        return alarmManager.getAlarms()
     }
     
 }

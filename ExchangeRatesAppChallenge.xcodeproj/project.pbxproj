@@ -29,7 +29,18 @@
 		3F5EB82F242FD8BD0016B04D /* CurrencyPickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB82E242FD8BD0016B04D /* CurrencyPickerHandler.swift */; };
 		3F5EB831243115080016B04D /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB830243115080016B04D /* AlarmViewModel.swift */; };
 		3F5EB833243115B50016B04D /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EB832243115B50016B04D /* AlarmManager.swift */; };
+		3FB5A650246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5A64F246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FB5A652246ACC6600B603E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F5EB809242F94A70016B04D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5EB810242F94A70016B04D;
+			remoteInfo = ExchangeRatesAppChallenge;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3F2EE98A2461F45F006F8AA1 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
@@ -56,10 +67,20 @@
 		3F5EB82E242FD8BD0016B04D /* CurrencyPickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPickerHandler.swift; sourceTree = "<group>"; };
 		3F5EB830243115080016B04D /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
 		3F5EB832243115B50016B04D /* AlarmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
+		3FB5A64D246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRatesAppChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FB5A64F246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesAppChallengeTests.swift; sourceTree = "<group>"; };
+		3FB5A651246ACC6600B603E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3F5EB80E242F94A70016B04D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB5A64A246ACC6500B603E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				3F5EB813242F94A70016B04D /* ExchangeRatesAppChallenge */,
+				3FB5A64E246ACC6500B603E0 /* ExchangeRatesAppChallengeTests */,
 				3F5EB812242F94A70016B04D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				3F5EB811242F94A70016B04D /* ExchangeRatesAppChallenge.app */,
+				3FB5A64D246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +224,15 @@
 				3F5EB822242F94AD0016B04D /* Info.plist */,
 			);
 			path = ExchangeRatesAppChallenge;
+			sourceTree = "<group>";
+		};
+		3FB5A64E246ACC6500B603E0 /* ExchangeRatesAppChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FB5A64F246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.swift */,
+				3FB5A651246ACC6600B603E0 /* Info.plist */,
+			);
+			path = ExchangeRatesAppChallengeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +255,24 @@
 			productReference = 3F5EB811242F94A70016B04D /* ExchangeRatesAppChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3FB5A64C246ACC6500B603E0 /* ExchangeRatesAppChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FB5A656246ACC6600B603E0 /* Build configuration list for PBXNativeTarget "ExchangeRatesAppChallengeTests" */;
+			buildPhases = (
+				3FB5A649246ACC6500B603E0 /* Sources */,
+				3FB5A64A246ACC6500B603E0 /* Frameworks */,
+				3FB5A64B246ACC6500B603E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FB5A653246ACC6600B603E0 /* PBXTargetDependency */,
+			);
+			name = ExchangeRatesAppChallengeTests;
+			productName = ExchangeRatesAppChallengeTests;
+			productReference = 3FB5A64D246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,6 +285,10 @@
 				TargetAttributes = {
 					3F5EB810242F94A70016B04D = {
 						CreatedOnToolsVersion = 11.4;
+					};
+					3FB5A64C246ACC6500B603E0 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 3F5EB810242F94A70016B04D;
 					};
 				};
 			};
@@ -252,6 +306,7 @@
 			projectRoot = "";
 			targets = (
 				3F5EB810242F94A70016B04D /* ExchangeRatesAppChallenge */,
+				3FB5A64C246ACC6500B603E0 /* ExchangeRatesAppChallengeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +317,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5EB81E242F94AD0016B04D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB5A64B246ACC6500B603E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +358,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FB5A649246ACC6500B603E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FB5A650246ACC6500B603E0 /* ExchangeRatesAppChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FB5A653246ACC6600B603E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5EB810242F94A70016B04D /* ExchangeRatesAppChallenge */;
+			targetProxy = 3FB5A652246ACC6600B603E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3F5EB823242F94AD0016B04D /* Debug */ = {
@@ -451,6 +529,46 @@
 			};
 			name = Release;
 		};
+		3FB5A654246ACC6600B603E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V53CJ86VCG;
+				INFOPLIST_FILE = ExchangeRatesAppChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.learn.ExchangeRatesAppChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExchangeRatesAppChallenge.app/ExchangeRatesAppChallenge";
+			};
+			name = Debug;
+		};
+		3FB5A655246ACC6600B603E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V53CJ86VCG;
+				INFOPLIST_FILE = ExchangeRatesAppChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.learn.ExchangeRatesAppChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExchangeRatesAppChallenge.app/ExchangeRatesAppChallenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -468,6 +586,15 @@
 			buildConfigurations = (
 				3F5EB826242F94AD0016B04D /* Debug */,
 				3F5EB827242F94AD0016B04D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FB5A656246ACC6600B603E0 /* Build configuration list for PBXNativeTarget "ExchangeRatesAppChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FB5A654246ACC6600B603E0 /* Debug */,
+				3FB5A655246ACC6600B603E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

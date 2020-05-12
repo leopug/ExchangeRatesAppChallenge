@@ -3,11 +3,15 @@ import Foundation
 
 class AlarmManager {
     
-    var alarms : [Alarm] = []
+    private var alarms : [Alarm] = []
     
     func addAlarm(_ newAlarm: Alarm){
         alarms.append(newAlarm)
         return
+    }
+    
+    func getAlarms() -> [Alarm] {
+        return alarms
     }
     
     init() {

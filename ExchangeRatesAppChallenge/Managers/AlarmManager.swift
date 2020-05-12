@@ -7,7 +7,6 @@ class AlarmManager {
     
     func addAlarm(_ newAlarm: Alarm){
         alarms.append(newAlarm)
-        return
     }
     
     func getAlarms() -> [Alarm] {

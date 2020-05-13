@@ -16,15 +16,10 @@ class ExchangeRateViewController: UIViewController {
         exchangeRateViewModel = ExchangeRateViewModel()
         
         pickerViewModel = CurrencyPickerHandler(currencyReceivable: exchangeRateViewModel)
-        
         setupExchangeTitle()
-        
         setupExchangeValue()
-        
         setupCurrencyPicker()
-        
         setupConstraints()
-        
     }
     
     func setupExchangeTitle(){
